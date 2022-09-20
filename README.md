@@ -17,6 +17,7 @@ Expected complexity O(log n)
 - Then we calculate the frequency of the element by subtracting the first index value from last index value and adding one.
 - We use recursive binary search for finding the frequency of elements '0' and '2' and find the frequency of '1' using length of 
   array and frequency of '0' and '2'.
+- Then we are comparing the three frequency values and printing the letter corresponding to the highest frequency.
 - As we are doing this recursively using binary search which divides the array in half every time function is called so the 
   complexity of algorithm is **O(log n)**
 
@@ -98,9 +99,6 @@ else:
 Y
 
 [0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2]
-Z
-
-[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2]
 Z
 
 [0, 0, 0, 1, 1, 2]
