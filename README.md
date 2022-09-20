@@ -1,6 +1,6 @@
-# Daa Assignment
+# DAA Assignment
 
-### Problem Statement:
+### PROBLEM STATEMENT:
 Accept a One dimensional array using random number generator.
 The array may be in the range of [0,1,2] [Only three numbers are permitted]
 Scan the array and print "X" if number "0" is more than number of "1" and "2".
@@ -8,13 +8,13 @@ Print "Y" if number of "1" are more than "0" and "2"
 Print "Z" if number of "2" are more than "0" and "1" 
 Expected complexity O(log n)
 
-### Explanaiton:
+### EXPLANATION:
 
 
 - In this question we are first populating an array with random number of '0' , '1' , and '2' in an sorted order. 
 - Then we are finding the frequency of each of the three elements using binary search. 
 - To find the frequency we use binary search recursively to get the index of first and last occurence of the element in the array.
-- Then we calculate the frequency of the element using the index values.
+- Then we calculate the frequency of the element by subtracting the first index value from last index value and adding one.
 - We use recursive binary search for finding the frequency of elements '0' and '2' and find the frequency of '1' using length of 
   array and frequency of '0' and '2'.
 - As we are doing this recursively using binary search which divides the array in half every time function is called so the 
@@ -91,3 +91,19 @@ else:
     print("Z")
   
   ```
+
+### TEST CASES
+```
+[0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 2, 2]
+Y
+
+[0, 0, 0, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2]
+Z
+
+[0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2]
+Z
+
+[0, 0, 0, 1, 1, 2]
+X
+
+```
